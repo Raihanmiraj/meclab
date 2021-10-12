@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="js/jsPDF/dist/jspdf.min.js"></script> -->
+    <script src="assets/jspdf.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script> -->
+   
+    <title>Document</title>
+</head>
+<body class="howpeoplesee" >
+    <div id="pdf" class="pdf ">
+
+  
+    <div class="firstsection">
+        <h1>MYMENSINGH ENGINEERING COLLEGE</h1>
+<img src="img/MEC_LOGO_new.png" alt="">
+        <h1 class="title1">  <span  onclick ="createInputField(this)">Department of Computer Science & Engineering</span></h1>
+
+      
+
+        <h1 class="title1">Lab Report</h1>
+        <h1 class="title2">Course Name : <span  onclick ="createInputField(this)">Chemistry The Rosayon</span></h1>
+        <h1 class="title2">Course Code : <span  onclick ="createInputField(this)">CHE - 1114</span></h1>
+
+       
+
+    </div>
+    <!-- <input onchange="inputBoxHandler()" class="inputboxdesign" type="text"/> -->
+
+    <div class="secondsection">
+<div class="firstlayer">
+<h1 class="title1" style="text-align: center;">Submitted By :</h1>
+<h1 class="fontsize">Name : <span  onclick ="createInputField(this)">Your Name</span></h1>
+<h1  class="fontsize" >Roll : <span  onclick ="createInputField(this)">49</span></h1>
+<h1  class="fontsize" >Batch : <span  onclick ="createInputField(this)">3rd</span></h1>
+</div>
+
+<div class="middlelayer">
+    <img src="img/dag.png" alt="">
+</div>
+
+<div class="secondlayer">
+    <h1 class="title1">Submitted To :</h1>
+  
+    <h1   class="fontsize" ><span  onclick ="createInputField(this)">Mrinal Kranti Roy</span></h1>
+    <h1   class="fontsize" ><span  onclick ="createInputField(this)">Lecturer in Chemistry</span></h1>
+    <h1   class="fontsize" ><span  onclick ="createInputField(this)">Department of General Science</span></h1>
+   
+
+  
+</div>
+
+
+
+    </div>
+
+
+    <div class="lastsection">
+<div class="firstlayer">
+    <h1 class="lastfont">Date of Experimnt : <span  onclick ="createInputField(this)">01/01/2021</span></h1>
+</div>
+<div class="secondlayer">
+    <div >……………………………….</div>
+    <h1 style="    margin-top: 5px;" class="lastfont">Signature</h1>
+    
+</div>
+
+    </div>
+</div>
+
+<div id="elementH">
+<button id="button" class="printbutton" onclick="clickHandler()">Print</button>
+ 
+</div>
+
+
+    <script>
+ 
+
+ 
+ 
+ 
+ 
+function clickHandler(){
+    document.getElementById("button").remove();
+    document.querySelector("body").classList.remove("howpeoplesee");
+ window.print()
+    document.getElementById("elementH").innerHTML = '<button id="button" class="printbutton" onclick="clickHandler()">Print</button>';
+$("#elementH").html()
+document.querySelector("body").classList.add("howpeoplesee");
+ 
+
+ 
+}
+
+function inputBoxHandler(e){
+ 
+var value = e.value;
+   
+e.parentNode.innerHTML =value ;
+
+
+
+}
+
+function createInputField(e)
+{
+console.log(e);
+// if(e.querySelector("input")){
+//     alert("heelo")
+// }
+// if(e.hasAttribute("onclick")){
+
+//     // e.onclick=createInputField(this)
+// }
+ 
+e.innerHTML = '<input onchange="inputBoxHandler(this)" class="inputboxdesign " type="text"/>';
+//
+
+// e.removeAttribute("onclick");
+e.querySelector("input").focus();
+
+ 
+}
+    </script>
+    
+</body>
+</html>
