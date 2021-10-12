@@ -44,6 +44,8 @@ self.addEventListener("install", event => {
 				"safari-pinned-tab.svg", // Favicon, Safari pinned tab
 				"share.jpg", // Social media sharing
 				"style.css", // Main CSS file
+				"assets/jspdf.min.js",
+				"assets/jquery.min.js"
 			]);
 		})
 	);
